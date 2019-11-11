@@ -1,4 +1,4 @@
-# joker-java 
+# joker
 
 # About and Rules of the Joker card game
 
