@@ -26,12 +26,12 @@ import joker.board.TurnStack;
  * having a particular {@linkplain SitueType} can be obtained through the 
  * {@linkplain #getSitue getSitue} factory method.</p>
  * <p>{@code Situe}s have two special methods that make sure 
- * {@linkplain joker.board.Turn}s taken on the {@code Board} observe game rules:
- * <ul><li>A {@linkplain #demand(joker.util.JoCard) demand(JoCard)} method 
+ * {@linkplain joker.board.Turn}s taken on the {@code Board} observe game rules:<br>
+ * A {@linkplain #demand(joker.util.JoCard) demand(JoCard)} method 
  * that tells if its argument can be played on the {@code Board}. Note that if 
  * this method returns {@code false} for a {@code JoCard} and the card is still
- * played, the card will be rejected by the {@code Board}.</li>
- * <li>A {@code handle()} method, that should be called at the end of each 
+ * played, the card will be rejected by the {@code Board}.
+ * A {@code handle()} method, that should be called at the end of each 
  * {@linkplain joker.board.Turn} on the {@code Board}. It has two forms: <br>
  * {@linkplain #handle(joker.playing.Plays, joker.util.JoCard) handle(player,
  * played)} that takes the player and the card played by that player as 
@@ -40,10 +40,10 @@ import joker.board.TurnStack;
  * player that played as argument. This method should be called when play by 
  * the player argument was not a card-playing move such as been skipped or
  * picking cards or going to the board.<br>
- * {@linkplain #handle(joker.board.Board, joker.util.JoCard) handle(board,
- * played)} that rather takes a {@code Board} argument. it should be the first
+ * {@linkplain #handle(joker.board.Board) handle(board)} 
+ * that rather takes a {@code Board} argument. it should be the first
  * type of handle() method called since the {@code Board} first takes turn 
- * in the <em>Joker</em> card game. Hence, its called only once.</li></ul></p>
+ * in the <em>Joker</em> card game. Hence, its called only once.</p>
  * @author OBUMUNEME NWABUDE
  * @since 1.0
  */

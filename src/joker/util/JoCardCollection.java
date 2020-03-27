@@ -14,7 +14,7 @@ import java.util.Spliterator;
 import joker.playing.Plays;
 
 /**
- * Defines a group of {@linkplain joker.game.JoCard JoCards}.
+ * Defines a group of {@linkplain joker.util.JoCard JoCards}.
  * <p>A {@code JoCardCollection} is the super class of all group of {@code JoCard}s
  * used in playing <em>Joker</em> card game.
  * @author OBUMUNEME NWABUDE 
@@ -59,7 +59,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
      * Checks whether this {@code JoCardCollection} is empty and returns
      * <code>true</code> if that is the case.
      * @return <code>true</code> if this {@code JoCardCollection} has no 
-     * {@linkplain joker.game.JoCard} in it. <code>false</code> if otherwise. 
+     * {@linkplain joker.util.JoCard} in it. <code>false</code> if otherwise. 
      */
     public boolean empty() {
         return cards.isEmpty();
@@ -74,7 +74,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /** 
-     * Returns the {@linkplain joker.game.JoCard} from this {@code JoCardCollection} 
+     * Returns the {@linkplain joker.util.JoCard} from this {@code JoCardCollection} 
      * found at the position provided by the argument.
      * @param i The position of the {@code JoCard} to be gotten from this 
      * {@code JoCardCollection}. 
@@ -86,7 +86,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /**
-     * Returns but does not remove the last {@linkplain joker.game.JoCard} from 
+     * Returns but does not remove the last {@linkplain joker.util.JoCard} from 
      * this {@code JoCardCollection}.
      * @return The last {@code JoCard} from this {@code JoCardCollection}.
      */
@@ -95,7 +95,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
 
     /**
-     * Returns but does not remove the first {@linkplain joker.game.JoCard} from 
+     * Returns but does not remove the first {@linkplain joker.util.JoCard} from 
      * this {@code JoCardCollection}.
      * @return The first {@code JoCard} from this {@code JoCardCollection}.
      * {@code null} is returned if this {@code JoCardCollection} is empty.
@@ -105,7 +105,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /** 
-     * Checks whether the {@linkplain joker.game.JoCard} argument is contained
+     * Checks whether the {@linkplain joker.util.JoCard} argument is contained
      * in this {@code JoCardCollection}.
      * @param that The {@code JoCard} to check for its presence in this 
      * {@code JoCardCollection}
@@ -117,7 +117,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
      /**
-     * Adds the provided {@linkplain joker.game.JoCard} argument to this
+     * Adds the provided {@linkplain joker.util.JoCard} argument to this
      * {@code JoCardCollection}.
      * @param card The {@code JoCard} to add to this {@code JoCardCollection}.
      */
@@ -128,7 +128,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /**
-     * Adds all the {@linkplain joker.game.JoCard JoCards} found in the 
+     * Adds all the {@linkplain joker.util.JoCard JoCards} found in the 
      * {@code JoCardCollection} argument to this {@code JoCardCollection}.
      * @param toAdd A {@code JoCardCollection} whose {@code JoCard}s are to be
      * added to this {@code JoCardCollection}.
@@ -144,7 +144,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /**
-     * Removes and returns the {@linkplain joker.game.JoCard} found at the 
+     * Removes and returns the {@linkplain joker.util.JoCard} found at the 
      * position provided as argument from this {@code JoCardCollection}, 
      * then shifts all the other {@code JoCard} members left to fill the gap 
      * created. 
@@ -162,7 +162,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
      /**
-     * Removes and returns the last {@linkplain joker.game.JoCard} 
+     * Removes and returns the last {@linkplain joker.util.JoCard} 
      * of this {@code JoCardCollection}.
      * @return The {@code JoCard} that has been removed.
      */
@@ -185,7 +185,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
         return cards.indexOf(that);
     }
     /**
-     * Removes or deals out the last {@linkplain joker.game.JoCard} from this 
+     * Removes or deals out the last {@linkplain joker.util.JoCard} from this 
      * {@code JoCardCollection} and adds it to the provided {@code JoCardCollection} 
      * argument. The second argument specifies how many times 
      * dealing takes place. 
@@ -239,7 +239,7 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /**
-     * Shuffles the {@linkplain joker.game.JoCard JoCards} in this 
+     * Shuffles the {@linkplain joker.util.JoCard JoCards} in this 
      * {@code JoCardCollection}.
      * @see java.util.Collections#shuffle Collections#shuffle
      */
@@ -256,9 +256,9 @@ public class JoCardCollection extends Observable implements Iterable<JoCard> {
     }
     
     /**
-     * Sorts the {@linkplain joker.game.JoCard JoCards} in this 
+     * Sorts the {@linkplain joker.util.JoCard JoCards} in this 
      * {@code JoCardCollection} such that they will be in ascending order 
-     * according to the {@linkplain joker.game.JoCard#compareTo JoCard.compareTo}.
+     * according to the {@linkplain joker.util.JoCard#compareTo JoCard.compareTo}.
      */
     public void sort() {
         try {

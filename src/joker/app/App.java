@@ -49,8 +49,7 @@ public class App extends Application {
     public BorderPane gamePane;
     
     /**
-     * A reference to the Stage used by {@link #start start(Stage)} so that 
-     * it can be used by {@link #logicThread logicThread}
+     * A reference to the Stage used by {@link #start start(Stage)}
      */
     public Stage myStage;
     
@@ -130,9 +129,7 @@ public class App extends Application {
         public MenuItem saveAndExitMI;
 
         /**
-         * The separator before Settings used in {
-         *
-         * @linkplian #gameMenu}
+         * The separator before Settings used in {@linkplain #gameMenu}
          */
         public SeparatorMenuItem sepS;
 

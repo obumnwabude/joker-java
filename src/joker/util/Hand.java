@@ -7,7 +7,7 @@
 package joker.util;
 
 /**
- * A {@code Hand} is a group of {@linkplain joker.game.JoCard JoCards} that contains
+ * A {@code Hand} is a group of {@linkplain joker.util.JoCard JoCards} that contains
  * {@code JoCards} that is used by a {@linkplain joker.playing.Plays player} 
  * while playing the <em>Joker</em> card game.
  * @author OBUMUNEME NWABUDE
@@ -24,7 +24,7 @@ public class Hand extends JoCardCollection {
     }
     
     /** 
-     * Checks whether a {@linkplain joker.game.JoCard} argument with the 
+     * Checks whether a {@linkplain joker.util.JoCard} argument with the 
      * provided {@code suit} can be found in this {@code Hand}.
      * @param cardSuit The {@code suit} to check for its presence in this 
      * {@code Hand}
@@ -36,7 +36,7 @@ public class Hand extends JoCardCollection {
     }
     
     /** 
-     * Checks whether a {@linkplain joker.game.JoCard} argument with the 
+     * Checks whether a {@linkplain joker.util.JoCard} argument with the 
      * provided {@code rank} can be found in this {@code Hand}.
      * @param cardRank The {@code rank} to check for its presence in this 
      * {@code Hand}

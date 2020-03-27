@@ -82,8 +82,12 @@ public class ShellUserPlayer extends UserPlayer {
     
     /**
      * handles external user input from console
-     * @param given
-     * @return 
+     * @param given a value used by callers of to tell this method what to 
+     * expect from the user's input. It indicates if the next move should go 
+     * towards undoing/redoing or if the next move should go towards should 
+     * go towards the selected action or card played or if the next move is to 
+     * choose a demanded suit
+     * @return The user's input from the command line or shell
      */
     public int inputHandler(int given) {
         String collected;

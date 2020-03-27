@@ -15,9 +15,9 @@ public enum SitueType {
     
     /**
      * The {@code NORMAL SitueType} stands for {@linkplain Situe Situes} in 
-     * which the next {@linkplain joker.game.JoCard JoCard} to be played should
+     * which the next {@linkplain joker.util.JoCard JoCard} to be played should
      * match the previously played one according to {@linkplain 
-     * joker.game.JoCard#match(joker.game.JoCard) JoCard.match(JoCard)} else
+     * joker.util.JoCard#match(joker.util.JoCard) JoCard.match(JoCard)} else
      * drawing should take place.
      */
     NORMAL(1, "Please play a card that match the suit or rank on the board."),
@@ -38,9 +38,9 @@ public enum SitueType {
     /**
      * The {@code COMMAND SitueType} stands for {@linkplain Situe Situes} in which
      * the next turn will have the {@linkplain joker.playing.Plays player} to 
-     * take it play any {@linkplain joker.game.JoCard JoCard} that matches the 
-     * demanded {@linkplain joker.game.JoCard#suit suit} according to 
-     * {@linkplain joker.game.JoCard#matchSuit(joker.game.JoCard) 
+     * take it play any {@linkplain joker.util.JoCard JoCard} that matches the 
+     * demanded {@linkplain joker.util.JoCard#suit suit} according to 
+     * {@linkplain joker.util.JoCard#matchSuit(joker.util.JoCard) 
      * JoCard.matchSuit(JoCard)}. Drawing takes place if 
      * such {@code JoCard} is not possessed and the next {@code JoCard} that must
      * be played must match the demanded {@code suit}.

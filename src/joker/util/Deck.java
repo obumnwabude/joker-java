@@ -36,7 +36,7 @@ public class Deck extends JoCardCollection {
     /**
      * Constructs a {@code Deck} with name as provided by the argument. The 
      * second argument specifies that this {@code Deck} is a standard {@code Deck}
-     * of 52 playing {@linkplain joker.game.Card cards}. In other words without
+     * of 52 playing {@linkplain joker.util.Card cards}. In other words without
      * the {@code Joker JoCards}.
      * @param label the label of this {@code Deck}.
      * @param i an integer, it should be equal to 0; it specifies that this

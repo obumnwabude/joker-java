@@ -7,7 +7,7 @@ package joker.board;
 
 /**
  * {@code NoDemandedSuitException} occurs when there is an attempt to request
- * for the {@code suit} demanded by a {@linkplain joker.util.Plays player} or
+ * for the {@code suit} demanded by a {@linkplain joker.playing.Plays player} or
  * the {@linkplain Board} and no {@code suit} was demanded.
  * @author OBUMUNEME NWABUDE
  * @since 1.0

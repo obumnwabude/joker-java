@@ -28,7 +28,7 @@ import java.util.Comparator;
  * @see Card
  * @see Card#rank rank
  * @see Card#suit suit
- * @see #match(joker.game.JoCard) match(JoCard) 
+ * @see #match(joker.util.JoCard) match(JoCard) 
  * @author OBUMUNEME NWABUDE
  * @since 1.0
  */

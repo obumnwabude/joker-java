@@ -116,7 +116,7 @@ public interface Board {
      * Tells if Adding and cooling is allowed on this {@code Board}.
      * @return {@code true} if adding and cooling is allowed {@code false} if 
      * otherwise.
-     * @see joker.situe.SitueType.PICKADDCOOL SitueType.PICKADDCOOL
+     * @see joker.board.situe.SitueType#PICKADDCOOL SitueType.PICKADDCOOL
      */
     public boolean addCool();
     
