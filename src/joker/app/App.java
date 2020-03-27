@@ -58,13 +58,13 @@ public class App extends Application {
      */
     public LogMaker logMaker;
     
-    /**
+    /*
      * Execution of the game begins here.
      * @param args the command line arguments
-     */
+     
     public static void main(String[] args) {
         launch(args);
-    }
+    }*/
     
     @Override
     public void init() {
