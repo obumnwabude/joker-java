@@ -15,7 +15,7 @@ import joker.board.NoDemandedSuitException;
 import joker.board.situe.Situe;
 import joker.util.Hand;
 import joker.util.JoCard;
-import org.checkerframework.checker.optional.qual.Present;
+import org.checkerframework.checker.optional.qual.MaybePresent;
 
 /**
  * The {@code SystemPlayer} class defines a {@linkplain Plays player} 
@@ -145,7 +145,7 @@ public class SystemPlayer implements Plays {
         }
         int[] counted = counterMyHand();
         int ind;
-        @Present OptionalInt opt = Arrays.stream(counted).distinct().max();
+        @MaybePresent OptionalInt opt = Arrays.stream(counted).distinct().max();
         if (opt.isPresent()) {
             Integer[] counted1 = new Integer[5];
             for (int j = 0; j < counted1.length; j++) {
@@ -249,7 +249,7 @@ public class SystemPlayer implements Plays {
                         
                 int[] suitsSecond = counterSecondSearch();
                 int ind;
-                @Present OptionalInt opt = Arrays.stream(suitsSecond).distinct().max();
+                @MaybePresent OptionalInt opt = Arrays.stream(suitsSecond).distinct().max();
                 if (opt.isPresent()) {
                     Integer[] inter = new Integer[5];
                     for (int j = 0; j < inter.length; j++) {
