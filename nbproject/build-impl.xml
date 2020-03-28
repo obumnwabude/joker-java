@@ -264,7 +264,13 @@ is divided into following sections:
                 <property location="${build.dir}/empty" name="empty.dir"/>
                 <mkdir dir="${empty.dir}"/>
                 <mkdir dir="@{apgeneratedsrcdir}"/>
-                <javac debug="@{debug}" deprecation="${javac.deprecation}" destdir="@{destdir}" encoding="${source.encoding}" excludes="@{excludes}" fork="${javac.fork}" includeantruntime="false" includes="@{includes}" source="${javac.source}" sourcepath="@{sourcepath}" srcdir="@{srcdir}" target="${javac.target}" tempdir="${java.io.tmpdir}">
+                <jsr308.javac debug="@{debug}" deprecation="${javac.deprecation}"
+                              destdir="@{destdir}" encoding="${source.encoding}"
+                              excludes="@{excludes}" fork="${javac.fork}"
+                              includeantruntime="false" includes="@{includes}"
+                              source="${javac.source}" sourcepath="@{sourcepath}"
+                              srcdir="@{srcdir}" target="${javac.target}"
+                              tempdir="${java.io.tmpdir}">
                     <src>
                         <dirset dir="@{gensrcdir}" erroronmissingdir="false">
                             <include name="*"/>
@@ -284,7 +290,7 @@ is divided into following sections:
                     <compilerarg path="@{apgeneratedsrcdir}"/>
                     <compilerarg line="${ap.proc.none.internal}"/>
                     <customize/>
-                </javac>
+                </jsr308.javac>
             </sequential>
         </macrodef>
     </target>
@@ -686,6 +692,19 @@ is divided into following sections:
             <element name="customize" optional="true"/>
             <sequential>
                 <property environment="env"/>
+                <property name="checkerframework" value="${env.CHECKERFRAMEWORK}" />
+
+                <!-- On Mac/Linux, use the javac shell script; on Windows, use javac.bat -->
+                <condition property="cfJavac" value="javac.bat" else="javac">
+                    <os family="windows" />
+                </condition>
+
+                <presetdef name="jsr308.javac">
+                    <javac fork="yes" executable="${checkerframework}/checker/bin/${cfJavac}" >
+                        <compilerarg value="-version"/>
+                        <compilerarg value="-implicit:class"/>
+                    </javac>
+                </presetdef>
                 <resolve name="profiler.current.path" value="${profiler.info.pathvar}"/>
                 <java classname="@{classname}" dir="${profiler.info.dir}" failonerror="${java.failonerror}" fork="true" jvm="${profiler.info.jvm}">
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
